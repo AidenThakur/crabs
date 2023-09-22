@@ -1,8 +1,10 @@
 function retval = crabs (input1, input2)
 
+%This comment is for the github commit changes test
+
 
 % Crabs is a kids computer game where a fisherman,  called the captain,
-% hunts for a very clever and powerful crab.
+% hunts for a very clever and powerful crab. Test Test tes
 
  % Draw the game map and initialize map dimensions.
    [mapHeight , mapWidth] = drawMap( "BGImage.png" );
