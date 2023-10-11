@@ -20,7 +20,7 @@ function retval = crabs (input1, input2)
   % Put your call to  drawCapt() here ….. You must give drawCapt its
    % input and output arguments.
 
-  captainGraphics = drawCapt (xCapt , yCapt , thetaCapt , sizeCapt)
+  captGraphics = drawCapt (xCapt , yCapt , thetaCapt , sizeCapt);
 
 %*******************************************************
   cmd = "null"; % initial command
@@ -30,17 +30,18 @@ function retval = crabs (input1, input2)
   cmd = kbhit(); % Read the keyboard.
 
   if( cmd == "w" || cmd == "a" || cmd == "d" ) %Captain has moved. Respond.
-% erase old captain
+     % erase old captain
 
      for i=1:length( captGraphics )
-      set( captGraphics(i), 'Visible', 'off' );
+      set(captGraphics(i), 'Visible', 'off' );
      endfor
 
 % move capt
   [xCapt, yCapt, thetaCapt] = moveCapt(cmd, xCapt, yCapt, thetaCapt);
 % draw new capt
   captGraphics = drawCapt( xCapt, yCapt, thetaCapt, sizeCapt);
-endif
+
+ endif
 
 
 endwhile
