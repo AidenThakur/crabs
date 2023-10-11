@@ -1,28 +1,28 @@
-function  [ xCapt, yCapt, thetaCapt ] = moveCapt( cmd, x, y, theta );
+%function  [ xCapt, yCapt, thetaCapt ] = moveCapt( cmd, x, y, theta );
 
-dTheta = pi/6;
-dStep = 50;
+%dTheta = pi/6;
+%dStep = 50;
 
-if( cmd == "w" ) %move forward
-xCapt = x + dstep*cos(theta);
-yCapt = x + dstep*sin(theta);
-thetaCapt = theta;
+%if( cmd == "w" ) %move forward
+%xCapt = x + dstep*cos(theta);
+%yCapt = x + dstep*sin(theta);
+%thetaCapt = theta;
 
-elseif ( cmd == "d" ) %turn right
-xCapt = x;
-yCapt = y;
-thetaCapt = theta - dTheta;
+%elseif ( cmd == "d" ) %turn right
+%xCapt = x;
+%yCapt = y;
+%thetaCapt = theta - dTheta;
 
-elseif ( cmd == "a" ) %turn left
-xCapt = x;
-yCapt = y;
-thetaCapt = theta + dTheta;
+%elseif ( cmd == "a" ) %turn left
+%xCapt = x;
+%yCapt = y;
+%thetaCapt = theta + dTheta;
 
-else % if none of the cases are true, set the new variables equal to the old inputs.
-xCapt = x;
-yCapt = y;
-thetaCapt = theta;
+%else % if none of the cases are true, set the new variables equal to the old inputs.
+%xCapt = x;
+%yCapt = y;
+%thetaCapt = theta;
 
-endif
+%endif
 
-endfunction
+%endfunction
