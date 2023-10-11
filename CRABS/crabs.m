@@ -11,7 +11,7 @@ function retval = crabs (input1, input2)
 
   % Initialize captain location,  heading and size
     xCapt   = 1000;
-    yCapt  = 500;
+    yCapt  = 1000;
     thetaCapt  = -pi/2;
     sizeCapt  =  50;
 
@@ -23,7 +23,26 @@ function retval = crabs (input1, input2)
   captainGraphics = drawCapt (xCapt , yCapt , thetaCapt , sizeCapt)
 
 %*******************************************************
+cmd = "null"; % initial command
+
+while ( cmd != "Q") % While not quit, read keyboard and respond
+
+cmd = kbhit(); % Read the keyboard.
+
+if( cmd == "w" || cmd == "a" || cmd == "d" ) %Captain has moved. Respond.
+% erase old captain
+for i=1:length( captGraphics )
+set( captGraphics(i), 'Visible', 'off' );
+endfor
+% move capt
+  [xCapt, yCapt, thetaCapt] = moveCapt(cmd, xCapt, yCapt, thetaCapt);
+% draw new capt
+  captGraphics = drawCapt( xCapt, yCapt, thetaCapt, sizeCapt);
+endif
 
 
+endwhile
 
+
+close all
 endfunction
