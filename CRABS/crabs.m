@@ -44,7 +44,7 @@ function retval = crabs (input1, input2)
      endfor
 
 % move capt
-  [xCapt, yCapt, thetaCapt] = moveCapt(cmd, xCapt, yCapt, thetaCapt);
+  [xCapt, yCapt, thetaCapt] = moveCapt(cmd, xCapt, yCapt, thetaCapt, mapWidth, mapHeight);
 % draw new capt
   captGraphics = drawCapt( xCapt, yCapt, thetaCapt, sizeCapt);
 

@@ -21,7 +21,7 @@ tStep = 50;
   yCrab = y - tStep*cos(theta);
   thetaCrab = theta;
 
- elseif(cmd == "i")%turn right
+ elseif(cmd == "u")%turn right
 
   xCrab = x;
   yCrab = y;
