@@ -1,14 +1,14 @@
-function  [ xCapt, yCapt, thetaCapt ] = moveCapt( cmd, x, y, theta );
+function  [ xCapt, yCapt, thetaCapt ] = moveCapt( cmd, x, y, theta, width, height );
 
    dTheta = pi/6;
    dStep = 50;
- %  buffer = 50;
+   buffer = 50;
 
 
 
    if( cmd == "w" ) %move forward
-   xCapt = x + dStep*cos(theta);
-   yCapt = y + dStep*sin(theta);
+   xTemp = x + dStep*cos(theta);
+   yTemp = y + dStep*sin(theta);
    thetaCapt = theta;
 
     if (isOnMap(xTemp,yTemp,width,height,buffer))
