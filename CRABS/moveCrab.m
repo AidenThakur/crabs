@@ -2,18 +2,39 @@ function [xCrab,yCrab,thetaCrab] = moveCrab(cmd,x,y,theta,size,height,width)
 
 sTheta = pi/6;
 tStep = 50;
+buffer= 50;
 
   if(cmd == "j")%move left
 
-  xCrab = x + tStep*sin(theta);
-  yCrab = y - tStep*cos(theta);
+  xTemp = x + tStep*sin(theta);
+  yTemp = y - tStep*cos(theta);
   thetaCrab = theta;
+
+      if (isOnMap(xTemp,yTemp,width,height,buffer))
+       xCrab = xTemp;
+       yCrab = yTemp;
+
+     else
+       xCrab = x;
+       yCrab = y;
+
+    endif
 
   elseif(cmd == "l")%move right
 
-  xCrab = x - tStep*sin(theta);
-  yCrab = y + tStep*cos(theta);
+  xTemp = x - tStep*sin(theta);
+  yTemp = y + tStep*cos(theta);
   thetaCrab = theta;
+
+      if (isOnMap(xTemp,yTemp,width,height,buffer))
+       xCrab = xTemp;
+       yCrab = yTemp;
+
+     else
+       xCapt = x;
+       yCapt = y;
+
+    endif
 
   elseif(cmd == "k")%move back
 

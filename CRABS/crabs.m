@@ -57,10 +57,10 @@ function retval = crabs (input1, input2)
     endfor
 
   %move crab
-  [xCrab, yCrab, thetaCrab] = moveCrab(cmd,xCrab,yCrab,thetaCrab,sizeCrab, mapHeight, mapWidth);
+  [xCrab, yCrab, thetaCrab] = moveCrab(cmd, xCrab, yCrab, thetaCrab, sizeCrab, mapHeight, mapWidth);
   %draw new captain and crab
   crabGraphics = drawCrab(xCrab,yCrab,thetaCrab,sizeCrab);
-
+  %[xCrab,yCrab,thetaCrab] = moveCrab(cmd,x,y,theta,size,height,width)
 
  endif
 
