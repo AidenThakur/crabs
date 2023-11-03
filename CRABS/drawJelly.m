@@ -1,7 +1,12 @@
 function jellyHandle = drawJelly (x,y,theta,size)
 
-jelly = getJelly(size);
-R = getRotation(theta);
+xJelly = x;
+yJelly = y;
+thetaJelly = theta;
+jellySize = size;
+
+jelly = getJelly(jellySize);
+R = getRotation(thetaJelly);
 jellyRotated = R*jelly;
 
 T = getTranslation(x,y);

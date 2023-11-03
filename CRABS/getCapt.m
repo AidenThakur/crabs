@@ -1,4 +1,4 @@
-function capt = getCapt (captSize)
+function capt = getCapt(captSize)
 %{
   Right Hand           	Spear Tip
           	         14 ____12____________13
@@ -39,18 +39,16 @@ captPt9 = [ 2*captSize; captSize/2; 1]; %left top of head
 captPt10 = [ captSize; captSize/2; 1]; %left neck
 %hands
 captPt11 = [ 0; 2*captSize; 1]; %left
+
 captPt12 = [ 0; -2*captSize; 1]; %right
-%spear
-captPt13=[ 3*captSize; -2*captSize; 1]; % spear point
-captPt14=[ -captSize; -2*captSize; 1]; % spear end
+captPt13=[ 3*captSize; -2*captSize; 1];
+captPt14=[ -captSize; -2*captSize; 1];
+captPt15=[ 3*captSize; -4*captSize; 1];
+captPt16=[ 5*captSize; -4*captSize; 1];
+captPt17=[ 5*captSize; -2*captSize; 1];
+captPt18=[ 4*captSize; -3*captSize; 1];
 
-%spear 2
-captPt15=[ -captSize; 2*captSize; 1]; %spear point
-captPt16=[ 3*captSize; 2*captSize; 1]; %spear end
 
-%elbows
-captPt17=[ 0 ; captSize; 1 ];
-captPt18=[ 0 ; -captSize; 1 ];
 %captain matrix
 capt = [ captPt1, captPt2, captPt3, captPt4, captPt5, captPt6, captPt7, ...
 captPt8, captPt9, captPt10, captPt11, captPt12, captPt13, captPt14, ...
