@@ -1,4 +1,4 @@
-function [graphicsHandle,xNet,yNet] = drawCapt(xCapt , yCapt , thetaCapt , sizeCapt)
+function [captainGraphics,xNet,yNet] = drawCapt(xCapt , yCapt , thetaCapt , sizeCapt)
          %[h, xNet, yNet]
 % In the future, this function will draw the captain at the given
 % position (xCapt ,  yCapt) , with heading thetaCapt.

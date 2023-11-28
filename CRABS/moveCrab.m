@@ -58,7 +58,7 @@ buffer= 50;
 else
  xCrab = x;
  yCrab = y;
- thetaCrab = theta
+ thetaCrab = theta;
 
 endif
 
