@@ -2,7 +2,7 @@ function level = drawStartScreen (imgName)
 
   % Draw a start screen containing the message "Enter a level 1-9” and read the users response.
     drawMap(imgName);
-      hold on
+     hold on
 % write myMessage at messageLoc
       myMessage = ['Enter a level 1-9 '];
 

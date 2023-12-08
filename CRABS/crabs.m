@@ -1,5 +1,10 @@
-function crabs(level)
+function crabs()
 %This comment is for the github commit changes test
+   playgame = 1;
+   while (playgame)
+     level = drawStartScreen( "crab.jpg" );
+
+
   numCrabs = level;
   numJelly = level;
 
@@ -7,7 +12,6 @@ function crabs(level)
 % hunts for a very clever and powerful crab. Test Test tes
 
  % Draw the game map and initialize map dimensions.
-   [mapHeight , mapWidth] = drawMap( "BGImage.png" );
    [mapHeight , mapWidth] = drawMap( "BGImage.png" );
 
   % Initialize captain location,  heading and size
@@ -84,7 +88,7 @@ while(1)
 
 cmd = kbhit(1); % Read the keyboard
 
-  if ( cmd == "Q") % While not quit, read keyboard and respond
+  if ( cmd == "Q" || crabsCaught == numCrabs) % While not quit, read keyboard and respond
 
    break;
 
@@ -130,7 +134,12 @@ cmd = kbhit(1); % Read the keyboard
 
 
 
- endwhile
+endwhile
+
+
+ playgame = drawEndScreen( "crab.jpg", crabsCaught, numCrabs);
+
+endwhile
 
 
 close all
